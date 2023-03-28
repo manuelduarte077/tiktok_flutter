@@ -20,14 +20,14 @@ class VideoButtons extends StatelessWidget {
         _CustomIconButton(
           value: video.likes,
           iconData: Icons.favorite,
-          iconColor: Colors.red,
+          color: Colors.red,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
         _CustomIconButton(
           value: video.views,
           iconData: Icons.remove_red_eye_sharp,
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 10),
         SpinPerfect(
           infinite: true,
           duration: const Duration(seconds: 5),
@@ -49,8 +49,8 @@ class _CustomIconButton extends StatelessWidget {
   const _CustomIconButton({
     required this.value,
     required this.iconData,
-    iconColor,
-  }) : color = iconColor ?? Colors.black;
+    this.color,
+  });
 
   @override
   Widget build(BuildContext context) {
